@@ -68,96 +68,39 @@ function generatedPassword() {
         specialCharacters: "!@#$%^&*\)[]{}\|;:'\".,<?>+=-_"
       };
 
-      // contains different selections that user can make
-      var selectionMap = { 
+      // store character selections that user has made
+      var characterSelections = '';
 
-      // possible testcases if user selects upperCase
-        upperCase: {lowerCase: "NO", numbersCase: "NO", specialCase: "NO"},
-        upperCase: {lowerCase: "YES", numbersCase: "YES", specialCase: "YES"},
-        upperCase: {lowerCase: "YES", numbersCase: "NO", specialCase: "NO"},
-        upperCase: {lowerCase: "NO", numbersCase: "YES", specialCase: "NO"},
-        upperCase: {lowerCase: "NO",numbersCase: "NO", specialCase: "YES"},
-        upperCase: {lowerCase: "YES",numbersCase: "YES", specialCase: "NO"},
-        upperCase: {lowerCase: "YES",numbersCase: "NO", specialCase: "YES"},
-        upperCase: {lowerCase: "NO",numbersCase: "YES", specialCase: "YES"},
-
-      // possible testcases if user selects lowerCase
-        lowerCase: {upperCase: "NO", numbersCase: "NO", specialCase: "NO"},
-        lowerCase: {upperCase: "YES", numbersCase: "YES", specialCase: "YES"},
-        lowerCase: {upperCase: "YES", numbersCase: "NO", specialCase: "NO"},
-        lowerCase: {upperCase: "NO", numbersCase: "YES", specialCase: "NO"},
-        lowerCase: {upperCase: "NO",numbersCase: "NO", specialCase: "YES"},
-        lowerCase: {upperCase: "YES",numbersCase: "YES", specialCase: "NO"},
-        lowerCase: {upperCase: "YES",numbersCase: "NO", specialCase: "YES"},
-        lowerCase: {upperCase: "NO",numbersCase: "YES", specialCase: "YES"},
-
-      // possible testcases if user selects numbersCase
-        numbersCase: {upperCase: "NO", lowerCase: "NO", specialCase: "NO"},
-        numbersCase: {upperCase: "YES", lowerCase: "YES", specialCase: "YES"},
-        numbersCase: {upperCase: "YES", lowerCase: "NO", specialCase: "NO"},
-        numbersCase: {upperCase: "NO", lowerCase: "YES", specialCase: "NO"},
-        numbersCase: {upperCase: "NO", lowerCase: "NO", specialCase: "YES"},
-        numbersCase: {upperCase: "YES", lowerCase: "YES", specialCase: "NO"},
-        numbersCase: {upperCase: "YES", lowerCase: "NO", specialCase: "YES"},
-        numbersCase: {upperCase: "NO", lowerCase: "YES", specialCase: "YES"},
-
-      // possible testcases if user selects specialCase
-        specialCase: {upperCase: "NO", lowerCase: "NO", numbersCase: "NO"},
-        specialCase: {upperCase: "YES", lowerCase: "YES", numbersCase: "YES"},
-        specialCase: {upperCase: "YES", lowerCase: "NO", numbersCase: "NO"},
-        specialCase: {upperCase: "NO", lowerCase: "YES", numbersCase: "NO"},
-        specialCase: {upperCase: "NO", lowerCase: "NO", numbersCase: "YES"},
-        specialCase: {upperCase: "YES", lowerCase: "YES", numbersCase: "NO"},
-        specialCase: {upperCase: "YES", lowerCase: "NO", numbersCase: "YES"},
-        specialCase: {upperCase: "NO", lowerCase: "YES", numbersCase: "YES"},
-      }
-    }
-
-    // if user selected upperCase, see if user selected other character options
-
-    if (upperCase === "YES") {
-      if (upperCase["lowerCase"] === "YES" && upperCase["numbersCase"] === "YES" && upperCase["specialCase"] === "YES") {
-        var possibleCharacters = characterTypeMap["lowerCase"] + characterTypeMap["upperCase"] + characterTypeMap["numbers"] + characterTypeMap["specialCharacters"];
+      // store characters in characterSelections list based on character types that user has selected
+      if (upperCase === "YES") {
+        characterSelections += characterTypeMap["upperCase"];
       }
 
-      else if (upperCase["lowerCase"] === "YES" && upperCase["numbersCase"] === "NO" && upperCase["specialCase"] === "NO") {
-        var possibleCharacters = characterTypeMap["lowerCase"] + characterTypeMap["upperCase"];
+      if (lowerCase === "YES") {
+        characterSelections += characterTypeMap["lowerCase"];
       }
 
-      else if (upperCase["lowerCase"] === "NO" && upperCase["numbersCase"] === "YES" && upperCase["specialCase"] === "NO") {
-        var possibleCharacters = characterTypeMap["upperCase"] + characterTypeMap["numbersCase"];
+      if (numbersCase === "YES") {
+        characterSelections += characterTypeMap["numbers"];
       }
 
-      else if (upperCase["lowerCase"] === "NO" && upperCase["numbersCase"] === "NO" && upperCase["specialCase"] === "YES") {
-        var possibleCharacters = characterTypeMap["upperCase"] + characterTypeMap["specialCase"];
+      if (specialCase === "YES") {
+        characterSelections += characterTypeMap["specialCharacters"];
       }
 
-      else if (upperCase["lowerCase"] === "YES" && upperCase["numbersCase"] === "YES" && upperCase["specialCase"] === "NO") {
-        var possibleCharacters = characterTypeMap["lowerCase"] + characterTypeMap["upperCase"] + characterTypeMap["numbersCase"];
-      }
-
-      else if (upperCase["lowerCase"] === "YES" && upperCase["numbersCase"] === "NO" && upperCase["specialCase"] === "YES") {
-        var possibleCharacters = characterTypeMap["lowerCase"] + characterTypeMap["upperCase"] + characterTypeMap["specialCase"];
-      }
-
-      else if (upperCase["lowerCase"] === "NO" && upperCase["numbersCase"] === "YES" && upperCase["specialCase"] === "YES") {
-        var possibleCharacters = characterTypeMap["upperCase"] + characterTypeMap["numbersCase"] + characterTypeMap["specialCase"];
-      }
-
-      else {
-        var possibleCharacters = characterTypeMap["upperCase"];
-      }
-      // generate password based off selected criteria
+      // generate random password based off user selections
+      // create newly generated password
       for (var i = 0; i < passwordLength; i++) {
-        password += possibleCharacters.charAt(Math.floor(Math.random()*(possibleCharacters.length)))
+        password += characterSelections.charAt(Math.floor(Math.random() * characterSelections.length))
       }
-
+      window.alert("Your password is: " + password);
+      // console.log(password);
     }
-          // show the newly created password
-    window.alert(password);
-
+    
   }
 }
+
+// generateBtn.addEventListener("click", generatedPassword());
 
 generatedPassword();
 function writePassword() {
