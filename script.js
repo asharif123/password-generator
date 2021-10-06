@@ -71,7 +71,6 @@ function generatedPassword() {
       // contains different selections that user can make
       var selectionMap = { 
 
-      // these are testcases
       // possible testcases if user selects upperCase
         upperCase: {lowerCase: "NO", numbersCase: "NO", specialCase: "NO"},
         upperCase: {lowerCase: "YES", numbersCase: "YES", specialCase: "YES"},
