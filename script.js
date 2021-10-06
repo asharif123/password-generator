@@ -92,20 +92,15 @@ function generatedPassword() {
         password += characterSelections.charAt(Math.floor(Math.random() * characterSelections.length))
       }
       window.alert("Your password is: " + password);
-      return password;
+      
+      // write the generated password to be displayed onto textbox
+      var passwordText = document.querySelector("#password");
+    
+      // put the generated password in the textarea section
+      passwordText.value = password;  
+
     }
     
   }
-}
-
-
-// function prints the password in the textbox
-function writePassword() {
-  var password = generatedPassword();
-  var passwordText = document.querySelector("#password");
-
-  // put the generated password in the textarea section
-  passwordText.value = password;
-
 }
 
