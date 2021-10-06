@@ -1,5 +1,4 @@
-// Assignment Code
-var generateBtn = document.querySelector("#generate");
+
 
 // INSTRUCTIONS:
 // when user hits button, give user options what to include
@@ -43,10 +42,10 @@ function generatedPassword() {
 
   else {
     // verify user selected character type (lowercase, uppercase, numeric, and/or special characters)
-    var upperCase = window.prompt("Do you want uppercase letters in your password? Enter Yes or No").toUpperCase();
-    var lowerCase = window.prompt("Do you want lowercase letters in your password? Enter Yes or No").toUpperCase();
-    var numbersCase = window.prompt("Do you want numbers in your password? Enter Yes or No").toUpperCase();
-    var specialCase = window.prompt("Do you want special characters in your password? Enter Yes or No").toUpperCase();
+    var upperCase = window.prompt("Do you want uppercase letters in your password? \(Enter Yes or No)").toUpperCase();
+    var lowerCase = window.prompt("Do you want lowercase letters in your password? \(Enter Yes or No)").toUpperCase();
+    var numbersCase = window.prompt("Do you want numbers in your password? Enter \(Enter Yes or No)").toUpperCase();
+    var specialCase = window.prompt("Do you want special characters in your password? \(Enter Yes or No)").toUpperCase();
 
     // If user fails to select any character type, tell user to make at least 1 selection and start process over
     if (upperCase === "NO" && lowerCase === "NO" && numbersCase === "NO" && specialCase === "NO") {
@@ -100,11 +99,13 @@ function generatedPassword() {
   }
 }
 
-// generateBtn.addEventListener("click", generatedPassword());
+// when user clicks on Generate Button, trigger the generatedPassword() function
+var generateBtn = document.querySelector("#generate");
+generateBtn.addEventListener("click", generatedPassword());
 
-generatedPassword();
+// generatedPassword();
 function writePassword() {
-  var password = generatePassword();
+  var password = generatedPassword();
   var passwordText = document.querySelector("#password");
 
   // put the generated password in the textarea section
