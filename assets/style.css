@@ -8,7 +8,12 @@ html,
 body,
 .wrapper {
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
+/* *********  body tag *************** */
 
 body {
   font-family: sans-serif;
@@ -19,13 +24,14 @@ body {
   padding: 30px 20px 0 20px;
 }
 
+/* ******* styling header **************** */
 header {
   text-align: center;
   padding: 20px;
-  padding-top: 0px;
   color: hsl(206, 17%, 28%);
 }
 
+/* ********* styling card section of body tag ******** */
 .card {
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
@@ -35,7 +41,7 @@ header {
   font-size: 18px;
   margin: 0 auto;
   text-align: center;
-  width: 50%;
+  width: 80%;
   padding: 30px 40px;
 }
 
@@ -47,6 +53,21 @@ header {
   text-align: center;
 }
 
+/* styling the password textbox section inside body tag */
+#password {
+  width: 100%;
+  min-height: 200px;
+  min-width: 90px;
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 1%;
+  padding: 20% 10%;
+  border: 2px dashed #c0c7cf;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* ************** styling button in footer section ****************** */
 .btn {
   border: none;
   background-color: hsl(360, 91%, 36%);
@@ -62,18 +83,7 @@ header {
   cursor: pointer;
 }
 
-#password {
-  width: 100%;
-  min-height: 200px;
-  min-width: 90px;
-  /* padding: 5% 10% 15% 10%; */
-  font-size: 1.2rem;
-  text-align: center;
-  margin: 1%;
-  border: 2px dashed #c0c7cf;
-  border-radius: 6px;
-  overflow: hidden;
-}
+
 
 @media (max-width: 795px) {
   .btn {
@@ -88,6 +98,8 @@ header {
   }
 }
 
+/* code to make website responsive */
+
 @media (max-width: 750px) {
   h2 {
     font-size: 1rem;
@@ -101,15 +113,17 @@ header {
   }
 
   h2 {
-    font-size: 0.5rem;
+    font-size: 0.8rem;
     margin-bottom: 11%;
   }
 }
 
-@media (max-width: 390px) {
-  #password {
-    padding-left: -15%;
+@media (max-width: 400px) {
+  h1 {
+    font-size: 50%;
   }
 }
+
+
 
 
