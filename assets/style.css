@@ -16,9 +16,7 @@ body {
 }
 
 .wrapper {
-  padding-top: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 30px 20px 0 20px;
 }
 
 header {
@@ -36,16 +34,9 @@ header {
   color: hsl(206, 17%, 28%);
   font-size: 18px;
   margin: 0 auto;
-  max-width: 800px;
+  text-align: center;
+  width: 50%;
   padding: 30px 40px;
-}
-
-.card-header::after {
-  content: " ";
-  display: block;
-  width: 100%;
-  background: #e7e9eb;
-  height: 2px;
 }
 
 .card-body {
@@ -56,9 +47,6 @@ header {
   text-align: center;
 }
 
-
-
-
 .btn {
   border: none;
   background-color: hsl(360, 91%, 36%);
@@ -66,7 +54,6 @@ header {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
     0px;
   color: hsl(0, 0%, 100%);
-  display: inline-block;
   font-size: 22px;
   line-height: 22px;
   margin: 16px 16px 16px 20px;
@@ -75,50 +62,54 @@ header {
   cursor: pointer;
 }
 
-button[disabled] {
-  cursor: default;
-  background: #c0c7cf;
-}
-
-.float-right {
-  float: right;
-}
-
 #password {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: none;
-  display: block;
   width: 100%;
-  padding-top: 15px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 85px;
+  min-height: 200px;
+  min-width: 90px;
+  /* padding: 5% 10% 15% 10%; */
   font-size: 1.2rem;
   text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 1%;
   border: 2px dashed #c0c7cf;
   border-radius: 6px;
-  resize: none;
   overflow: hidden;
 }
 
-@media (max-width: 690px) {
+@media (max-width: 795px) {
   .btn {
-    font-size: 1rem;
+    font-size: 100%;
     margin: 16px 0px 0px 0px;
     padding: 10px 15px;
   }
 
   #password {
+    font-size: 0.7rem;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 750px) {
+  h2 {
     font-size: 1rem;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .btn {
-    font-size: 0.8rem;
+    font-size: 0.5rem;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 0.5rem;
+    margin-bottom: 11%;
   }
 }
+
+@media (max-width: 390px) {
+  #password {
+    padding-left: -15%;
+  }
+}
+
+
