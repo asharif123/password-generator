@@ -13,3 +13,5 @@ The final step is the user will be able to see their generated password in the t
 Here are screenshots:
 
 ![images]\main-website.JPG
+
+![images]\main-website.JPG
