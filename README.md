@@ -10,8 +10,4 @@ These character types are if user wants to add lowercase, uppercase, special cha
 
 The final step is the user will be able to see their generated password in the textbox.
 
-Here are screenshots:
-
-![images]\main-website.JPG
-
-![images]\main-website.JPG
+![](images/main-website.JPG)
