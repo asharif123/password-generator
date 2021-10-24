@@ -14,4 +14,6 @@ This was created using HTML, CSS and Javascript where Javascript was used to gen
 
 Here are the screenshots:
 
+This screenshot represents the main webgape user sees where the user can click on "Generate Password" button to create unique password.
+
 ![alt-text](./images/main-website.JPG "main website")
