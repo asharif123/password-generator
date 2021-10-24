@@ -11,3 +11,7 @@ These character types are if user wants to add lowercase, uppercase, special cha
 The final step is the user will be able to see their generated password in the textbox.
 
 This was created using HTML, CSS and Javascript where Javascript was used to generate prompts when user hits "Generate Password" and to also generate the random password and paste it in the textbox area.
+
+Here are the screenshots:
+
+![alt-text](./images/main-website.JPG "main website")
