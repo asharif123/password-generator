@@ -17,3 +17,13 @@ Here are the screenshots:
 This screenshot represents the main webgape user sees where the user can click on "Generate Password" button to create unique password.
 
 ![alt-text](./images/main-website.JPG "main website")
+
+Once user clicks "Generate Password', user is given prompts for how many characters and what to include in the password ("special characters, numbers, etc.)
+
+The password is then generated based off selected criteria and user is able to see the password in the middle of the webpage
+
+![alt-text](./images/password-generator-1.JPG "password")
+
+![alt-text](./images/password-generator-2.JPG "password")
+
+![alt-text](./images/password-generator-3.JPG "password")
