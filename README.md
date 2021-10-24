@@ -11,3 +11,19 @@ These character types are if user wants to add lowercase, uppercase, special cha
 The final step is the user will be able to see their generated password in the textbox.
 
 This was created using HTML, CSS and Javascript where Javascript was used to generate prompts when user hits "Generate Password" and to also generate the random password and paste it in the textbox area.
+
+Here are the screenshots:
+
+This screenshot represents the main webgape user sees where the user can click on "Generate Password" button to create unique password.
+
+![alt-text](./images/main-website.JPG "main website")
+
+Once user clicks "Generate Password', user is given prompts for how many characters and what to include in the password ("special characters, numbers, etc.)
+
+The password is then generated based off selected criteria and user is able to see the password in the middle of the webpage
+
+![alt-text](./images/password-generator-1.JPG "password")
+
+![alt-text](./images/password-generator-2.JPG "password")
+
+![alt-text](./images/password-generator-3.JPG "password")
